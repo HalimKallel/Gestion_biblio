@@ -1,0 +1,14 @@
+<form (ngSubmit)="ajoutauteur()">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom Auteur" [(ngModel)]="auteurs.nomauteur">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="auteurs.email">
+    </div>
+    <div class="mb-3">
+      <input type="number" class="form-control" id="numtel" name="numtel" placeholder="Numéro Telephone" [(ngModel)]="auteurs.numtel">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </div>
+  </form>

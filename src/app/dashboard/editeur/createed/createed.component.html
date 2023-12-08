@@ -1,0 +1,15 @@
+<form (ngSubmit)="ajoutediteur()">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="maisonedition" name="maisonedition" placeholder="Maison Edition" [(ngModel)]="editeurs.maisonedit">
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" id="siteweb" name="siteweb" placeholder="Site Web" [(ngModel)]="editeurs.siteweb">
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="editeurs.email">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </div>
+  </form>
+  

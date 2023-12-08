@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Les Auteurs</h2>
+    <a href="#" routerLink="/auteurs/create/" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i>
+    Nouveau Auteur
+    </a>
+<div>
+    <p>liste des auteurs</p>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Nom Auteur</th>
+                <th>Email</th>
+                <th>Numéro de Tel</th>
+                <th>Modifier</th>
+                <th>supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let aut of auteurs">
+                    <td>{{aut.nomauteur}}</td>
+                    <td>{{aut.email}}</td>
+                    <td>{{aut.numtel}}</td>
+                    <td>
+                        
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <a href="#" [routerLink]="['/auteurs/', aut._id,'edit']" class="btn btn-warning"> <i class="bi bi-pencil-square" style="color:white"></i></a>
+                        </div>
+                    </td>
+                    <td>
+                        
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" (click)="deleteAuteur(aut._id)" class="btn btn-danger"><i class="bi bi-trash-fill" style="color:white"></i></button>
+                    </div>
+                    
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>

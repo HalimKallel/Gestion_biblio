@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Edit Editeur</h2>
+    <form (ngSubmit)="updateEditeur()">
+      <div class="mb-3">
+        <label for="maisonedit" class="form-label">Maison Edition</label>
+        <input type="text" class="form-control" id="maisonedit" name="maisonedit" placeholder="Maison Edition" [(ngModel)]="editeurs.maisonedit" required>
+      </div>
+      <div class="mb-3">
+        <label for="siteweb" class="form-label">Site Web</label>
+        <input type="text" class="form-control" id="siteweb" name="siteweb" placeholder="Site Web" [(ngModel)]="editeurs.siteweb" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="editeurs.email" required>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+  

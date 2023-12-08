@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Les Editeurs</h2>
+    <a href="#" routerLink="/editeurs/create/" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i>
+    Nouveau Editeur
+    </a>
+<div>
+    <p>liste des editeurs</p>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Maison Edition</th>
+                <th>Site Web</th>
+                <th>Email</th>
+                <th>Modifier</th>
+                <th>supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let ed of editeurs">
+                    <td>{{ed.maisonedit}}</td>
+                    <td>{{ed.siteweb}}</td>
+                    <td>{{ed.email}}</td>
+                    <td>
+                        
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <a href="#" [routerLink]="['/editeurs/', ed._id,'edit']" class="btn btn-warning"> <i class="bi bi-pencil-square" style="color:white"></i></a>
+                        </div>
+                    </td>
+                    <td>
+                        
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" (click)="deleteEditeur(ed._id)" class="btn btn-danger"><i class="bi bi-trash-fill" style="color:white"></i></button>
+                    </div>
+                    
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>

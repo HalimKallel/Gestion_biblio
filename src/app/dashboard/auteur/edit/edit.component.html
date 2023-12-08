@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Edit Auteur</h2>
+  <form (ngSubmit)="updateauteur()">
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom Auteur</label>
+      <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom Auteur" [(ngModel)]="auteurs.nomauteur" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="auteurs.email" required>
+    </div>
+    <div class="mb-3">
+      <label for="numtel" class="form-label">Numéro Telephone</label>
+      <input type="number" class="form-control" id="numtel" name="numtel" placeholder="Numéro Telephone" [(ngModel)]="auteurs.numtel" required>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </div>
+  </form>
+</div>

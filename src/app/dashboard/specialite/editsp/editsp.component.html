@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Edit Specialité</h2>
+  <form (ngSubmit)="updatespecialite()">
+    <div class="mb-3">
+      <label for="nomsp" class="form-label">Nom Specialité</label>
+      <input type="text" class="form-control" id="nomsp" name="nomsp" placeholder="Nom Specialité" [(ngModel)]="specialites.nomspecialite" required>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </div>
+  </form>
+</div>

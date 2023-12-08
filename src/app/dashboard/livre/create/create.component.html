@@ -1,0 +1,60 @@
+    <form (ngSubmit)="ajoutlivre()">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="isbn" name="isbn" placeholder="isbn" [(ngModel)]="livres.isbn">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre" [(ngModel)]="livres.titre">
+      </div>
+      <div class="mb-3">
+        <input type="number" class="form-control" id="annedition" name="annedition" placeholder="Année edition" [(ngModel)]="livres.annedition">
+      </div>
+      <div class="mb-3">
+        <input type="number" class="form-control" id="prix" name="prix" placeholder="Prix" [(ngModel)]="livres.prix">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="couverture" name="couverture" placeholder="Couverture" [(ngModel)]="livres.couverture">
+      </div>
+      <div class="mb-3">
+        Specialité : <select name="specilaite" class="form-control"
+        
+        [(ngModel)]="livres.specialite" >
+        
+        <option *ngFor="let sd of specialites"
+        
+        value="{{sd._id}}">
+        
+        {{sd.nomspecialite}}
+        </option>
+        </select>
+    </div>
+    <div class="mb-3">
+      Maison Edition : <select name="maised" class="form-control"
+      
+      [(ngModel)]="livres.maised" >
+      
+      <option *ngFor="let sd of maisoneditions"
+      
+      value="{{sd._id}}">
+      
+      {{sd.maisonedit}}
+      </option>
+      </select>
+  </div>
+  <div class="mb-3">
+    Auteurs : <select name="auteurs" class="form-control"
+    
+    [(ngModel)]="livres.auteurs" >
+    
+    <option *ngFor="let sd of auteurs"
+    
+    value="{{sd._id}}">
+    
+    {{sd.nomauteur}}
+    </option>
+    </select>
+  </div>
+      <div>
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+      </div>
+    </form>
+  

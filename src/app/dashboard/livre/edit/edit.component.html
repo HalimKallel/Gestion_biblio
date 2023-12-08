@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Edit Livre</h2>
+    <form (ngSubmit)="updateLivre()">
+      <div class="mb-3">
+        <label for="titre" class="form-label">Titre</label>
+        <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre" [(ngModel)]="livres.titre" required>
+      </div>
+      <div class="mb-3">
+        <label for="annedition" class="form-label">Année Edition</label>
+        <input type="number" class="form-control" id="annedition" name="annedition" placeholder="Année Edition" [(ngModel)]="livres.annedition" required>
+      </div>
+      <div class="mb-3">
+        <label for="prix" class="form-label">Prix</label>
+        <input type="number" class="form-control" id="prix" name="prix" placeholder="Prix" [(ngModel)]="livres.prix" required>
+      </div>
+      <div class="mb-3">
+        <label for="qtestock" class="form-label">Quantité Stock</label>
+        <input type="number" class="form-control" id="qtestock" name="qtestock" placeholder="Quantité Stock" [(ngModel)]="livres.qtestock" required>
+      </div>
+      <div class="mb-3">
+        Specialité:
+        <select name="specialite" class="form-control" [(ngModel)]="livres.specialite">
+          <option *ngFor="let sd of specialites" [value]="sd._id">{{sd.nomspecialite}}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        Maison Edition:
+        <select name="maisoned" class="form-control" [(ngModel)]="livres.maised">
+          <option *ngFor="let sd of maisoneditions" [value]="sd._id">{{sd.maisonedit}}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        Auteur:
+        <select name="auteur" class="form-control" [(ngModel)]="livres.auteurs">
+          <option *ngFor="let sd of auteurs" [value]="sd._id">{{sd.nomauteur}}</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+  
