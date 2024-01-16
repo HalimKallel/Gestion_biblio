@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form (ngSubmit)="registerUser()" class="border p-4 shadow">
+
+        <h2 class="mb-4 text-center">User Registration</h2>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" [(ngModel)]="user.email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" [(ngModel)]="user.password" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="firstname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name" [(ngModel)]="user.firstname" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your last name" [(ngModel)]="user.lastname" required>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+
+        <!-- Add the Login button here -->
+        <div class="text-center mt-3">
+          <p>Already have an account? <a routerLink="/login">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

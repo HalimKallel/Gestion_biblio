@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-signin border p-4 shadow">
+          <form (ngSubmit)="loginUser()">
+  
+            <h3 class="h3 mb-3 font-weight-normal text-center">Login</h3>
+  
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" [(ngModel)]="email" required>
+            </div>
+  
+            <div class="mb-3">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" [(ngModel)]="password" required>
+            </div>
+  
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

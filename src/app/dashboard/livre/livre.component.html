@@ -16,9 +16,9 @@
                 <th>Annedition</th>
                 <th>Prix</th>
                 <th>Quanitité</th>
-                <th>specialite</th>
-                <th>maised</th>
-                <th>auteurs</th>
+                <th>Specialite</th>
+                <th>MaisonEd</th>
+                <th>Auteurs</th>
                 <th>Show</th>
                 <th>Modifier</th>
                 <th>supprimer</th>
@@ -37,7 +37,7 @@
                     <td>{{pr.maised.maisonedit}}</td>
                     <td>
                         <div *ngFor="let auteur of pr.auteurs">{{auteur.nomauteur}}</div>
-                      </td>
+                    </td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                             <a href="#" [routerLink]="['/livres/', pr._id,'view']" class="btn btn-default"><i class="bi bi-info-square-fill"></i></a>

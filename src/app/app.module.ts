@@ -7,10 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { LivreModule } from './dashboard/livre/livre.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuteurModule } from './dashboard/auteur/auteur.module';
 import { SpecialiteModule } from './dashboard/specialite/specialite.module';
+import { AuthentificationModule } from './authentification/authentification.module';
 
 
 @NgModule({
@@ -26,7 +26,8 @@ import { SpecialiteModule } from './dashboard/specialite/specialite.module';
     AuteurModule,
     HttpClientModule,
     SpecialiteModule,
-    DashboardModule
+    DashboardModule,
+    AuthentificationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

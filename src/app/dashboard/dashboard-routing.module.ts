@@ -7,12 +7,16 @@ import { LivreComponent } from './livre/livre.component';
 import { EditeurComponent } from './editeur/editeur.component';
 import { AuteurComponent } from './auteur/auteur.component';
 import { SpecialiteComponent } from './specialite/specialite.component';
+import { authGuard } from '../authentification/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
     children: [
+
+
+      
       { path: 'sidenav', component: SidenavComponent },
       { path: 'auteur', component: AuteurComponent },
       { path: 'livre', component: LivreComponent },
